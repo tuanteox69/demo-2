@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> Hàm kiểm tra số nguyên tố</title>
+</head>
+<body>
+<form>
+    <h3> Nhập một số nguyên bất kì</h3>
+    <input id="number" type="number" placeholder="số nhỏ hơn 10000" oninput="isPrime(this.value)">
+    <p id="ketqua"></p>
+</form>
+</body>
+</html>
+<script>
+    function isPrime(number) {
+        number = parseInt(number);
+        let check = true;
+        for (let i = 2; i <= number / 2; i++) {
+            if (number % i == 0) {
+                document.getElementById('ketqua').innerHTML = number + " không phải số Nguyên tố";
+                check = false;
+                break;
+            }
+        }
+        if (check) {
+            document.getElementById('ketqua').innerHTML = number + " là số nguyên tố"
+        }
+    }
+</script>
