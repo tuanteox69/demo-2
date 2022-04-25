@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kiểm tra từ đối xứng</title>
+</head>
+<body>
+<script>
+    let str = prompt("Nhập chuỗi");
+    function icheck(str){
+        for (let i = 0; i <str.length/2 ; i++) {
+            if(str[i] !== str[str.length -1 -i]){
+                return false;
+            }
+        }
+        return true;
+    }
+    alert(icheck(str));
+</script>
+</body>
+</html>
